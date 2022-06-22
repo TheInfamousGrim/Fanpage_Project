@@ -7,27 +7,28 @@ body {
 
 .donald-background {
     background-image: linear-gradient(0deg, rgba(26,26,26,0.2), rgba(26,26,26,0.2)), url("../Images/Childish_Gambino_Wallpaper.jpg");
-    background-position: 50% 50%;
-    min-height: 770px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
-.top-padding-grid-container {
+.top-padding-flex-container {
     padding-top: 60px;
 }
 
-.grid-container-introduction {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-auto-flow: column;
+.flex-container-introduction {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     padding: 10px;
     min-height: 717px;
     margin: auto;
-    width: 60%;
+    width: 70%;
 }
 
-.left-grid-item-title {
+.left-flex-item-title {
     border-style: solid;
     border-color: #db545a;
     border-width: 13px;
@@ -35,29 +36,39 @@ body {
     border-bottom-width: 0px;
     border-left-width: 0px;
     padding: 30px 20px 30px 0px;
+    max-width: 30%;
+    min-width: 240px;
+    flex-shrink: 1;
 }
 
 .left-item-text {
     font-family: 'Oswald', sans-serif;
-    font-size: 3.4375rem;
+    font-size: 3rem;
     font-weight: 400;
     word-wrap: break-word;
     margin: 0px;
 }
 
-.centre-grid-item-bio {
+.centre-flex-item-bio {
     padding: 30px 20px 30px 20px;
+    max-width: 30%;
+    min-width: 240px;
+    flex-shrink: 1;
 }
 
 .bio-title {
     font-family: 'Oswald', sans-serif;
-    font-size: 3.4375rem;
+    font-size: 3rem;
     font-weight: 300;
     margin: 0px 0px 16px 0px;
 }
 
 .padding-bottom-bio-main {
     padding: 32px 0px 0px 0px;
+}
+
+.container-button-discography {
+    text-align: center;
 }
 
 .button-discography {
@@ -69,6 +80,7 @@ body {
     text-decoration: none;
     stroke: none;
     color: aliceblue;
+    text-align: center;
     margin: 24px auto 0 0;
     padding: 18px 54px;
     background-color: #db545a;
@@ -82,7 +94,12 @@ body {
     border-color: #333129;
 }
 
-.right-grid-item-albums {
+.button-discography:active {
+    background-color: #333129;
+    border-color: #333129;
+}
+
+.right-flex-item-albums {
     border-style: solid;
     border-color: #db545a;
     border-width: 13px;
@@ -90,16 +107,19 @@ body {
     border-bottom-width: 0px;
     border-right-width: 0px;
     padding: 30px 0px 30px 20px;
+    max-width: 33%;
+    min-width: 240px;
+    flex-shrink: 1;
 }
 
 .album-title {
     font-family: 'Oswald', sans-serif;
-    font-size: 3.4375rem;
+    font-size: 3rem;
     font-weight: 300;
     margin: 0px 0px 16px 0px;
 }
 
-.bottom-padding-grid-container {
+.bottom-padding-flex-container {
     padding-bottom: 60px;
 }
 
@@ -118,10 +138,32 @@ body {
 .favourite-song-title {
     font-family: 'Oswald', sans-serif;
     font-size: 2.225rem;
+    width: 70%;
+    text-align: center;
 }
 
-.favourite-song-title {
-    margin-top: 0px;
+.favourite-song-name {
+    margin-top: 12px;
+    width: 70%;
+    text-align: center;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+    padding-top: 33.75%;
+    margin: 24px;
+}
+
+.responsive-mama-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 120px;
+    width: 100%;
+    height: 100%;
 }
 
 .donald-footer {
@@ -131,13 +173,16 @@ body {
 
 .donald-footer-quote {
     font-size: 0.875rem;
-    margin: 0px;
+    margin: 0px 15%;
     padding: 64px 0px 16px 0px;
+    width: 70%;
 }
 
 .donald-footer-quote-name {
     font-size: 0.875rem;
-    margin: 0px;
+    margin: 0px 15%;
     padding: 0px 0px 64px 0px;
     font-weight: 700;
+    width: 70%;
 }
+
